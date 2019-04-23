@@ -1,19 +1,7 @@
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.GridLayout;
-import java.awt.Point;
-import java.awt.Rectangle;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-
-import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.JTextField;
 
 /**
  * Class representing a Calculator with Graphical elements.
@@ -219,8 +207,6 @@ public class GraphicalCalculatorFrame extends JFrame {
          * @return True if the region content is sucessfully set. False otherwise.
          */
         public boolean setSelectedRegionContents(String content) {
-            boolean success = true;
-
 
             if ((selectedRegion + 2) % 2 == 0 && content.equals("1") || content.equals("2") ||
                     content.equals("3") || content.equals("4") || content.equals("5") ||
