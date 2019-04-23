@@ -208,17 +208,17 @@ public class GraphicalCalculatorFrame extends JFrame {
          */
         public boolean setSelectedRegionContents(String content) {
 
-            if ((selectedRegion + 2) % 2 == 0 && content.equals("1") || content.equals("2") ||
+            if ((selectedRegion + 2) % 2 == 0 && (content.equals("1") || content.equals("2") ||
                     content.equals("3") || content.equals("4") || content.equals("5") ||
                     content.equals("6") || content.equals("7") || content.equals("8") ||
-                    content.equals("9") || content.equals("0")) {
+                    content.equals("9") || content.equals("0"))) {
                 operands[selectedRegion / 2] = Integer.parseInt(content);
                 this.revalidate();
                 this.repaint();
                 return true;
             }
-            if ((selectedRegion + 2) % 2 == 1 && content.equals("+") || content.equals("-") ||
-                    content.equals("*")) {
+            if ((selectedRegion + 2) % 2 == 1 && (content.equals("+") || content.equals("-") ||
+                    content.equals("*"))) {
                 operators[(selectedRegion - 1) / 2] = (content);
                 this.revalidate();
                 this.repaint();
